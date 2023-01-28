@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
-
+import Home from './Home'
 import { ChakraProvider, FormControl,
   FormLabel,
   Input,
@@ -21,6 +21,8 @@ import { ChakraProvider, FormControl,
 import { useState } from "react";
 import LoginPage from "./LoginPage";
 import Main from "./Main";
+import Friends from "./Friends";
+import TimeLine from "./TimeLine";
 
 
 
@@ -31,9 +33,11 @@ import Main from "./Main";
 
 function App() {
   return (
-    <ChakraProvider  h="100%">
+    <ChakraProvider h="100%">
         <Route exact path="/" component={LoginPage} />
-        <Route path="/main" component={Main} />
+        <Route path="/main" component={Home} />
+        <Route path="/friends" component={Friends} />
+        <Route path="/timeline" component={TimeLine} />        
     </ChakraProvider>
   );
 }
